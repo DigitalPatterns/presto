@@ -22,6 +22,9 @@ RUN \
   chmod +x /usr/bin/presto && \
   chown -R "java:java" /usr/lib/presto /data/presto
 
+COPY --chown=java:java run-presto /usr/bin/presto/bin/run-presto
+RUN chmod +x /usr/bin/presto/bin/*
+
 USER java
 
 EXPOSE 8080 8443
