@@ -22,8 +22,8 @@ RUN \
   chmod +x /usr/bin/presto && \
   chown -R "java:java" /usr/lib/presto /data/presto
 
-COPY --chown=java:java run-presto /usr/bin/presto/bin/run-presto
-RUN chmod +x /usr/bin/presto/bin/*
+COPY --chown=java:java run-presto /usr/lib/presto/bin/run-presto
+RUN chmod +x /usr/lib/presto/bin/*
 
 USER java
 
