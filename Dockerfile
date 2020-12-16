@@ -5,7 +5,7 @@ WORKDIR /usr/lib/presto
 
 RUN apt update && \
     apt upgrade -y && \
-    apt install -y build-essential && \
+    apt install -y build-essential less && \
     curl -sL https://deb.nodesource.com/setup_lts.x | bash - && \
     apt install -y python && \
     rm -rf /var/lib/apt/lists/* && \
